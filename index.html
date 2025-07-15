@@ -14,23 +14,11 @@
         
         
     
-    <button>New Quote</button>
-        <button><img src="twitter.png" alt="">tweet</button>
+    <button onclick="getquote(api_irl)">New Quote</button>
+        <button onclick="tweet()"><img src="twitter.png" alt="">tweet</button>
    </div>
    <script src="app.js">
-    const quote = document.getElementById("Quote");
-const author = document.getElementById("author");
 
-
-const api_url="https://api.quotable.io";
-
-async function getquote(url){
-    const response= await fetch(url);
-    var data = await response.json();
-
-    quote.innerHTML=data.content;
-    author.innerHTML = data.author;
-}
    </script>
 </body>
 </html>
